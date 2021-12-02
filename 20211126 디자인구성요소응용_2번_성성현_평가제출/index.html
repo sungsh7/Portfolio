@@ -1,0 +1,342 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+
+
+<body>
+        <div id="container">
+            
+            <div id="nav" class="marginLeft">
+                <button id="btn"><img src="img/Hamburger_icon.svg.png" alt="#"></button>
+                <ul id="menu">
+                    <li>우리동네 보호소
+                        <ul class="sub hidden">
+                            <li>입양신청</li>
+                            <li>임시보호위탁</li>
+                            <li>오시는길</li>
+                        </ul>
+                    </li>
+                    <li>자원봉사신청및 후원
+                        <ul class="sub hidden">
+                            <li>자원봉사신청</li>
+                            <li>후원 계좌</li>
+                            <li>사료 후원</li>
+                        </ul>
+                    </li>
+                    <li>SNS 소개 
+                        <ul class="sub hidden">
+                            <li>유튜브</li>
+                            <li>인스타그램</li>
+                            <li>페이스북</li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </div>            
+ 
+<!-- 메뉴바 끝 -->
+<!-- 메인 이미지 -->
+
+ <div id="main"> 
+    <section id="visual1"></section> 
+    <section id="visual2"></section>
+    <section id="visual3">
+        <div id="text1">
+        <p><span>고양이</span>를<br> 싫어하는사람을 조심해라</p>
+            <p> -아일랜드 속담- </p>
+        </div>
+    </section>
+</div>
+</div>
+  
+<!--  텍스트까지 끝 -->
+<!-- 2페이지 -->
+<!-- 왼쪽 박스 -->
+     <div id="sub1">
+    <div id="bgBox1"></div>
+         <div id="subBox1">
+        <section>
+            <div id="textBox1" class="opa">
+            <p><span>우리동네보호소<br></span>
+                이름 : 엄지<br>
+                나이 : 약3개월<br>
+                종류 : 코리안 숏헤어<br>
+                중성화 : 안함 <br>
+                예방접종 : 안함<br>
+            </p>
+        </div>     
+        </section>
+        
+        <p><span> 고양이가</span> 사람의 친구가 되어주는것은, <br>
+            꼭 그래야만하기 때문이 아니라 
+            그들이 좋아서 그렇게 하는것이다.</p>
+            <p>-칼 뱅 베흐텐-</p>
+        </div>
+
+
+        <!-- 오른쪽 박스 -->
+        
+        <div id="subBox2">
+            <p><span>우리의 삶</span> 에서<br> 고양이가 반겨주는 것 
+                만큼 마음을 흐뭇하게 
+                하는것은 잘 없다<br>
+                -테이 호호프-
+            </p>
+           
+        <section>
+            <div id="textBox2" class="opa">
+                <p><span>우리동네 보호소</span><br>
+                    
+                    이름 : 검지<br>
+                    나이 : 약 2개월 <br>
+                    종류 : 코리안 숏헤어<br>
+                    중성화 : 안함 <br>
+                    예방접종 : 안함 <br>
+                </p>
+        </section>
+        </div> 
+     </div>
+
+
+     <!--  마지막 페이지 시작 -->
+     <!-- 슬라이드를 써볼생각임 -->
+     <div id="sub2">
+         <div id="bgBox2"></div>
+
+         <div id="subBox3">
+
+            <div id="showBox">
+             <div id="slideImgBox">
+            <section id="imgBox1">
+                <div id="textBox3">
+                    <p><span></span></p> 
+                </div>
+            </section>
+
+            <section id="imgBox2">
+                <div id="textBox4">
+                    <p><span></span></p> 
+                </div>
+            </section>
+
+             <section id="imgBox3">
+                <div id="textBox4">
+                    <p><span></span></p> 
+                </div>
+            </section>
+        </div>
+    </div>     
+            <p><span></span></p>
+            <p></p>
+         </div>
+
+         
+     </div>
+     
+</body>
+<script>
+// 슬라이드메뉴 
+//버튼을 클릭하면
+//nav 가 옆에서 나온다
+//트랜지션을 넣어서 천천히 나오게 한다
+    const $btn = document.querySelector('#btn');
+    const $nav = document.querySelector('#nav');
+    $btn.addEventListener('click',()=>{
+        $nav.classList.toggle('marginLeft');  
+    });
+// nav 안에있는 메뉴 슬라이드 
+    const $menu = document.querySelectorAll('#menu>li');
+    const $sub = document.querySelectorAll('.sub');
+    const $subLi = document.querySelectorAll('.sub li');
+    // console.log($navTwo);
+    // console.log($menu);
+    // console.log($sub);
+    // console.log($subLi);
+    for(let i= 0; i <$menu.length; i++ ){
+        // console.log($sub[i]);
+    $menu[i].addEventListener('click',()=>{
+        $sub[i].classList.toggle('hidden');   
+    });
+    }
+    // 슬라이드 메뉴 종료
+
+    //마우스를 올리면 해당 박스의 백그라운드가 바뀐다
+    //왜 첫번째 박스만 바뀌지 ..?
+
+
+    // for(let j = 0; j < $sub.length; j++){
+    //     $subLi[j].addEventListener('mouseenter',(e)=>{
+    //         console.log(e.target);
+    //         console.log($subLi[j]);
+    
+    //         e.target.style.backgroundColor = 'gray';
+    //     });
+    // } 
+    // for(let j = 0; j < $sub.length; j++){
+    //     $subLi[j].addEventListener('mouseleave',(e)=>{
+    //         e.target.style.backgroundColor = '';
+    //     });
+    // }
+//  새로 시작한다 ----------------------------------------
+
+// 응용은 했는데 정확하게 왜 이렇게 되는지는 잘 모르겠음.
+//이벤트를 주변으로 퍼트린다 ..? 
+
+    $subLi.forEach(function($subLi){
+        $subLi.addEventListener('mouseenter',(e)=>{
+            // console.log($subLi);
+            e.target.style.backgroundColor = 'gray';
+            e.target.style.color = 'whitesmoke';
+        });
+    });
+    $subLi.forEach(function($subLi){
+        $subLi.addEventListener('mouseleave',(e)=>{
+            e.target.style.backgroundColor = '';
+            e.target.style.color = '';
+        });
+    });
+        //메뉴 이벤트 끝
+
+    // sub1 메뉴 마우스 오버 이벤트 
+
+    //텍스트박스를 선언해준다 
+    const $subBoxOne = document.querySelector('#subBox1 >section');
+    // console.log($subBoxOne);
+    const $txtBoxOne = document.querySelector('#textBox1');
+    // console.log($txtBoxOne);
+    const $subBoxTwo = document.querySelector('#subBox2 >Section');
+    // console.log($subBoxTwo);
+    const $txtBoxTwo = document.querySelector('#textBox2');
+    // console.log($txtBoxTwo);
+    const $slideSubBox = document.querySelector('#subBox1');
+
+    const $slideSubBoxTwo = document.querySelector('#subBox2');
+
+    const $slideSubBoxThree = document.querySelector('#subBox3');
+//이벤트를 부여한다
+//마우스를 해당 섹션에 올렸을때
+//숨겨져있던 textbox가 나온다
+    $slideSubBox.style.transition = '2s';
+    $slideSubBoxTwo.style.transition = '2s';
+
+    $txtBoxOne.style.transition = '1s';
+    $txtBoxTwo.style.transition = '1s';
+    $subBoxOne.addEventListener('mouseenter', ()=>{
+        $txtBoxOne.classList.toggle('opa');  
+    });
+    $subBoxTwo.addEventListener('mouseenter', ()=>{
+        $txtBoxTwo.classList.toggle('opa');
+    });
+    $subBoxOne.addEventListener('mouseleave', ()=>{
+        $txtBoxOne.classList.toggle('opa');
+    });
+    $subBoxTwo.addEventListener('mouseleave', ()=>{
+        $txtBoxTwo.classList.toggle('opa');
+    });
+    
+    // 스크롤을 내려서 일정 높이를 넘어가면 
+    //슬라이드 박스가 두개가 나옴 
+    // 박스가 나오고 ,일정 높이를 넘어가면 다시 없어짐
+    window.addEventListener('scroll',()=>{
+        // console.log(window.scrollY);
+        if(window.scrollY <600){
+            $slideSubBox.style.marginLeft = '-150vw';
+            $slideSubBoxTwo.style.marginRight = '-150vw'; 
+        }if(window.scrollY >= 600){
+            $slideSubBox.style.marginLeft = '0';
+            $slideSubBoxTwo.style.marginRight = '0'; 
+        }if(window.scrollY >= 1200){
+            $slideSubBox.style.marginLeft = '-150vw';
+            $slideSubBoxTwo.style.marginRight = '-150vw'; 
+        }
+    });
+
+
+
+    // 마지막페이지 이미지 슬라이드 
+    // 자동으로 이미지가 슬라이드 되도록한다
+    
+    
+    // const $imgBoxOne = document.querySelector('#imgBox1');
+    // const $imgBoxTwo = document.querySelector('#imgBox2');
+    // const $imgBoxThree = document.querySelector('#imgBox3');
+    // console.log($imgBoxOne);
+    // console.log($imgBoxTwo);
+    // console.log($imgBoxThree);
+
+    // let $currentOpacityValueOne = 1;
+    // let $currentOpacityValueTwo = 0;
+    // let $currentOpacityValueThree = 0;
+    // $imgBoxOne.style.opacity = $currentOpacityValueOne;
+    // $imgBoxTwo.style.opacity = $currentOpacityValueTwo;
+    // $imgBoxThree.style.opacity = $currentOpacityValueThree;
+    
+    // $imgBoxOne.style.transition = '1s';
+    // $imgBoxTwo.style.transition = '1s';
+    // $imgBoxThree.style.transition = '1s';
+
+    // const fadeOutImgBoxOne = setInterval(() => {
+    //     if($currentOpacityValueOne <= 1){
+    //         $currentOpacityValueOne -= 0.1 ;
+    //         $imgBoxOne.style.opacity = $currentOpacityValueOne;
+    //         if($imgBoxOne.style.opacity < 0.5) {
+    //             $currentOpacityValueTwo += 0.2;
+    //             $imgBoxTwo.style.opacity = $currentOpacityValueTwo;
+    //         }
+    //     }
+    //     if($currentOpacityValueOne < 0) {
+    //         clearInterval(fadeOutImgBoxOne);
+            
+    //     }
+        
+    // console.log('fadeOut setInterval function call :done');
+    // },600);
+
+    
+// 슬라이드 박스가 
+//5초마다 -15vw 만큼 움직인다
+//슬라이드 박스 선언 해준다
+        const $slideImgBox = document.querySelector('#slideImgBox');
+        const $slideImgBoxSection = document.querySelectorAll('#slideImgBox section');
+
+        // console.log($slideImgBox);
+        // console.log($slideImgBoxSection);
+        
+
+        // 타이머를 어떻게 써야되나 ..
+        let imgBoxM =  $slideImgBox.style.marginLeft = 0  ;
+            let marL = 15 ;
+            let vw = "vw";
+            
+       const startSlide = setInterval(() => {
+           for(let i = 0; i < $slideImgBoxSection.length; i++) {
+            //    let start = $slideImgBox.style.marginLeft = -(marL) + vw ;
+            //    console.log(start); 
+            $slideImgBoxSection[0].style.marginLeft = -(marL) + vw ;
+               if( $slideImgBoxSection[0].style.marginLeft <= -(marL)+vw){
+                   console.log($slideImgBoxSection[i]);
+                  
+               }
+            
+                
+               
+                 }  
+          
+        }, 3000);
+
+
+
+ 
+</script>
+
+
+
+</html>
