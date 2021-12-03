@@ -304,6 +304,12 @@
 // 슬라이드 박스가 
 //5초마다 -15vw 만큼 움직인다
 //슬라이드 박스 선언 해준다
+//슬라이드 빨간박스가 5초후 왼쪽으로 -15vw 움직인다 
+//슬라이드 빨간 박스가 왼쪽으로 갔을때 파란박스가 -15vw 만큼 움직인다 
+//노란박스가 쇼 박스에 도착하고 5초 뒤에 
+//빨간 박스의 위치가 다시 원점으로 돌아간다
+//위의 과정이 계속 반복된다
+
         const $slideImgBox = document.querySelector('#slideImgBox');
         const $slideImgBoxSection = document.querySelectorAll('#slideImgBox section');
 
@@ -312,25 +318,29 @@
         
 
         // 타이머를 어떻게 써야되나 ..
+        // 값을 지정해준다.
+
         let imgBoxM =  $slideImgBox.style.marginLeft = 0  ;
             let marL = 15 ;
             let vw = "vw";
             
+        
        const startSlide = setInterval(() => {
            for(let i = 0; i < $slideImgBoxSection.length; i++) {
             //    let start = $slideImgBox.style.marginLeft = -(marL) + vw ;
             //    console.log(start); 
             $slideImgBoxSection[0].style.marginLeft = -(marL) + vw ;
-               if( $slideImgBoxSection[0].style.marginLeft <= -(marL)+vw){
-                   console.log($slideImgBoxSection[i]);
-                  
+               if( $slideImgBoxSection[0].style.marginLeft =-marL ){
+                   console.log($slideImgBoxSection[0]);
+                   
+                   
                }
             
                 
                
                  }  
           
-        }, 3000);
+        }, 5000);
 
 
 
