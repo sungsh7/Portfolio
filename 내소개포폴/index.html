@@ -15,7 +15,8 @@
         .opa0 {
             opacity: 0;
         }
-        .opa1{
+
+        .opa1 {
             opacity: 1;
         }
 
@@ -53,13 +54,24 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
         }
 
         #color1 #poto {
-            width: 5vw;
-            height: 13vh;
+            width: 7vw;
+            height: 16vh;
             background-color: aquamarine;
 
+        }
+
+        #textbox1 {
+            width: 15vw;
+            height: 20vh;
+            font-size: 1em;
+        }
+
+        #textbox1 span {
+            font-size: 1.2em;
         }
 
         #color2 {
@@ -69,7 +81,14 @@
             position: relative;
             z-index: 2;
             opacity: 0.6;
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+        }
+        #textbox2{
+            width: 20vw;
+            height: 50vh;
         }
 
         #color3 {
@@ -103,14 +122,14 @@
             width: 50vw;
             height: inherit;
             position: relative;
-            border: 1px solid black;
+            /* border: 1px solid black; */
         }
 
         #bgImg2 {
             width: 50vw;
             height: inherit;
             position: relative;
-            border: 1px solid black;
+            /* border: 1px solid black; */
 
         }
 
@@ -118,7 +137,7 @@
             width: 50vw;
             height: inherit;
             position: relative;
-            border: 1px solid black;
+            /* border: 1px solid black; */
 
         }
 
@@ -126,7 +145,7 @@
             width: 50vw;
             height: inherit;
             position: relative;
-            border: 1px solid black;
+            /* border: 1px solid black; */
 
         }
     </style>
@@ -141,18 +160,25 @@
         </div>
         <div id="colorBox">
             <section id="color1">
-                <div id="textbox">
-                    <h2>안녕하세요 ~~입니다</h2>
-                    <p>성격 유형태그 몇개 달아둔다</p>
+                <div id="textbox1">
+                    <h2>안녕하세요! 호기심많은 <br> 예술가 <span>성성현</span>입니다.</h2>
+                    <p>#낙천적 #활발함 #꾸준함 <br>
+                        #열정 # 상상력 #ISFP #자신감<br>
+                        #자유로움 #호기심 #겸손 #감수성
+                    </p>
                 </div>
                 <div id="poto"><img src="" alt="증명사진"></div>
             </section>
             <section id="color2">
-                <p> 이력이력이력</p>
-                <p> 이력이력이력</p>
-                <p> 이력이력이력</p>
-                <p> 이력이력이력</p>
-                <p> 이력이력이력</p>
+                <div id="textbox2">
+                    <h2>경력 사항</h2>
+                    <p>2014 - 2016 - 커피빈코리아 suvervisor 직무 수행</p><br>
+                    <p>2016.08 - 2017.04 - 대전 카페팔롬비니 매장매니저  </p><br>
+                    <p>2017.05 - 2018.02 - 용산 아이파크몰 Tom N Toms 매니저</p><br>
+                    <p>2018.03 - 2019. 01 - 홍대 징기스 양고기전문점 직원 </p><br>
+                    <p>2019.02 - 2019.11 - 세종 카페 팔롬비니 점장 </p><br>
+                    <p>2021.05 - 2021.12 - [대전그린컴퓨터학원] 반응형 웹디자인 실무 양성과정 수료 </p><br>
+                </div>
             </section>
             <section id="color3">작업물 내용</section>
             <section id="color4">연락처 (카톡,깃허브)</section>
